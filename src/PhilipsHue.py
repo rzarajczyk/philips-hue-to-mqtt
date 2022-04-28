@@ -33,7 +33,7 @@ class PhilipsHue:
             lights = status['groups'][group_id]['lights']
 
             properties = [
-                StringProperty(self, 'id', name="Internal ID", initial_value=group_id),
+                StringProperty('id', name="Internal ID", initial_value=group_id),
                 IntProperty('lights-count', name="Number of lights", initial_value=len(lights)),
                 StringProperty('bulbs', name="Bulbs", initial_value=self.create_bulbs_descriprtion(lights)),
             ]
